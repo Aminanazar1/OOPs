@@ -1,0 +1,41 @@
+package MODULE1;
+
+public class cpu {
+	double price;
+	class Processor {
+		double cores ;
+		String manufacturer;
+		double getCache ( ) {
+			return 4.3 ;}}
+	static class RAM{
+		double memory;
+		String manufacturer;
+		double getClockSpeed() {
+			return 5.5 ;}}
+}
+cpudetails.java
+-----
+package MODULE1;
+import java.util.Scanner;
+
+public class cpudetails {
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		cpu cpu = new cpu();
+		System.out.print("enter processor cache size:");
+		String processorCache = scanner.nextLine();
+		System.out.print("enter RAM Clock speed:");
+		String ramClockSpeed = scanner.nextLine();		
+		cpu.Processor processor = cpu.new Processor();
+		cpu.RAM ram =new cpu.RAM();
+		System.out.println("Processor Cache =" + processor.getCache());
+		System.out.println("RAM Clock speed =" + ram.getClockSpeed());
+		scanner.close();
+	}
+}
+output:
+----
+enter processor cache size:4.3
+enter RAM Clock speed:5.3
+Processor Cache =4.3
+RAM Clock speed =5.5
