@@ -1,0 +1,79 @@
+package MODULE1;
+
+import java.util.Scanner;
+public class MatrixAdd {
+
+	public static void main(String[] args) {
+		int p,q,m,n;
+		Scanner s =new Scanner (System.in);
+		System.out.print("enter number of rows in matrix A:");
+		p = s.nextInt();
+		System.out.print("enter number of columns in matrix A:");
+		q=s.nextInt();
+		System.out.print("enter number of rows in matrix B:");
+		m=s.nextInt();
+		System.out.print("enter number of columns in matrix B:");
+		n=s.nextInt();
+		if(p == m && q == n) {
+			int a[][] = new int[p][q];
+			int b[][]= new int[m][n];
+			System.out.println("enter the elements of matrix A:");
+			for(int i=0 ;i<p ;i++)
+				for(int j=0 ;j<q ;j++)
+					a[i][j]=s.nextInt();
+			System.out.println("enter the elements of matrix B:");
+			for(int i=0 ;i<m;i++)
+				for(int j=0;j<n;j++)
+					b[i][j]=s.nextInt();
+			System.out.println(" matrix A:");
+			for(int i=0;i<p;i++) {
+				for(int j=0;j<q;j++)
+					System.out.print(a[i][j]+ " ");
+			System.out.println();}
+			System.out.println(" matrix B:");
+			for(int i=0;i<m;i++) {
+				for(int j=0;j<n;j++)
+					System.out.print(b[i][j]+ " ");
+			System.out.println();}
+			System.out.println(" The sum of Matrix:");
+			for(int i=0;i<m;i++) {
+				for(int j=0;j<n;j++)
+					System.out.print(a[i][j]+b[i][j]+ " ");
+			System.out.println();}
+		}
+		else {
+			System.out.println("these matrices cannot be added...");
+		}
+
+  output:
+  ----
+  enter number of rows in matrix A:3
+enter number of columns in matrix A:3
+enter number of rows in matrix B:3
+enter number of columns in matrix B:3
+enter the elements of matrix A:
+1 2 3
+4 5 6
+7 8 9
+enter the elements of matrix B:
+3 2 1 
+6 5 4
+9 8 7
+ matrix A:
+1 2 3 
+4 5 6 
+7 8 9 
+ matrix B:
+3 2 1 
+6 5 4 
+9 8 7 
+ The sum of Matrix:
+4 4 4 
+10 10 10 
+16 16 16 
+
+		
+			
+	}
+
+}
